@@ -1,4 +1,7 @@
-#+TITLE: Intellimacs
+#+TITLE: Intellimacsflykeys
+
+This is a modified version of marcoieni's intellimacs. The main focus is to replace most of the VIM bindings with
+a modifed version of xah-fly-keys by Xah Lee.
 
 [[http://spacemacs.org][file:https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg]]
 
@@ -46,7 +49,7 @@ Read [[file:docs/KEYBINDINGS.org][KEYBINDINGS.org]] to see all 200+ available ke
    - (Optional) [[https://plugins.jetbrains.com/plugin/15976-which-key][Which-Key]]: menu that shows the available commands as you type
 2. Clone this repository in your home directory:
   #+begin_src sh
-  git clone https://github.com/MarcoIeni/intellimacs ~/.intellimacs
+  git clone https://github.com/Weiqifan1/intellimacsflykeys ~/.intellimacs
   #+end_src
 3. In your home directory, create the file =.ideavimrc= and edit it in order to
   include the modules you want by sourcing the relative source files.
