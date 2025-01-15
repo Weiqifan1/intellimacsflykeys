@@ -9,9 +9,8 @@ source ~/.intellimacs/hybrid.vim
 source ~/.intellimacs/which-key.vim
 
 " (Optional) My own vim commands
-nnoremap Y y$
-" Ensure that only Escape enters normal mode; mouse actions do not
-set mouse=
+source ~/.intellimacs/flykeys/basicchangestovim.vim
+source ~/.intellimacs/flykeys/firstlevelflybindings.vim
 
 " (Optional) Comma for major mode
 nmap , <leader>m
@@ -20,3 +19,5 @@ vmap , <leader>m
 " (Optional) Add/edit actions
 nnoremap <leader>gl    :action Vcs.Show.Log<CR>
 vnoremap <leader>gl    :action Vcs.Show.Log<CR>
+
+
