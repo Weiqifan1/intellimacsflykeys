@@ -1,7 +1,8 @@
-#+TITLE: Intellimacsflykeys
+#+TITLE: Intellimacsjumpkeys
 
-This is a modified version of marcoieni's intellimacs. The main focus is to replace most of the VIM bindings with
-a modifed version of xah-fly-keys by Xah Lee.
+This is a modified version of marcoieni's intellimacs. The main focus is to replace most of the VIM commands with
+intellij actions. This project was originally inspired by https://github.com/xahlee/xah-fly-keys by Xah Lee,
+but is heavily focused on using the AceJump plugin and commands specific to intellij.
 
 [[http://spacemacs.org][file:https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg]]
 
