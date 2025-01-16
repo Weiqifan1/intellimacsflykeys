@@ -4,6 +4,23 @@ This is a modified version of marcoieni's intellimacs. The main focus is to repl
 intellij actions. This project was originally inspired by https://github.com/xahlee/xah-fly-keys by Xah Lee,
 but is heavily focused on using the AceJump plugin and commands specific to intellij.
 
+installation instructions:
+
+* Installation
+1. Go to the IDE's plugin manager (File -> Settings -> Plugins) and install
+  the following plugins:
+   - [[https://plugins.jetbrains.com/plugin/164-ideavim][IdeaVim]]: vim emulation
+   - [[https://plugins.jetbrains.com/plugin/15976-which-key][Which-Key]]: menu that shows the available commands as you type
+   - [[https://plugins.jetbrains.com/plugin/7086-acejump][AceJump]]: quick cursor movement
+2. Clone this repository in your home directory:
+  #+begin_src sh
+  git clone https://github.com/Weiqifan1/intellimacsflykeys ~/.intellimacs
+  #+end_src
+3. In your home directory, create the file =.ideavimrc= and paste the content from the file MAINIDEAVIMRCFILE/.ideavimrc
+
+
+The original Readme from marcoieni's project:
+
 [[http://spacemacs.org][file:https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg]]
 
 [[file:docs/preview.gif]]
