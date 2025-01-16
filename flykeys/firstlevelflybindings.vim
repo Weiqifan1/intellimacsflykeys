@@ -170,21 +170,27 @@ nmap <A-q> :WhichKey "<A-"<CR>                   " mappings starting from Alt.
 nmap m <C-y>                                        " Scroll up one line (same as Ctrl+Y in Vim)
 nmap <C-m> <C-b>                                    " Page up
 nmap <A-m> <C-u>                                    " Half-page up
+
 nmap n <C-e>                                        " Scroll down one line (same as Ctrl+E in Vim)
 nmap <C-n> <C-f>                                    " Page down
 nmap <A-n> <C-d>                                    " Half-page down
+
 nmap b :action ActivateLastWindow<CR>              " Focus the last active tool window
 nmap <C-b> :action ActivateToolWindows<CR>         " Show the list of tool windows
 nmap <A-b> :action HideActiveWindow<CR>            " Close the active tool window
+
 nmap v :action PasteMultiple<CR>                   " Paste from history
 nmap <C-v> v                                        " Enter visual mode
 nmap <A-v> :action EditorJoinLines<CR>             " Join lines (Ctrl+Shift+J in IntelliJ)
+
 nmap c :action EditorCut<CR>                      " kill
 nmap <C-c> :action EditorCopy<CR>                 " Copy
 nmap <A-c> D                                        " Delete (kill) from the cursor to the end of the line
+
 nmap x :action ShowIntentionActions<CR>            " Show context actions
 nmap <C-x> :action Generate<CR>                    " Show IntelliJ's "Generate" menu
 nmap <A-x> :action MainMenu<CR>                    " Open the Main menu
+
 nmap z :action ContextMenu<CR>                     " Open context menu
 nmap <C-z> :action RefactorPopup<CR>               " Open refactor popup
 nmap <A-z> :action ToolsMenu<CR>                   " Open the tools menu
