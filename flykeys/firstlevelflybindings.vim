@@ -4,13 +4,6 @@
 
 
 " homerow sugeestion:
-" GH insert-mode, C+G Beginning of line, C+H End of Line, A+G start of File, A+H end of file
-" FJ Ace Jump Jump To Char, C+ Jump back,  A+ jump to line,
-" KL;O Arrows,  C+ K; Matching Brace C+[ C+], C+ OL Next/Prev block C+A+[ C+A+]
-              " A+ K; expand/collapse all items, A+ OL expand/collapse all items (FileMenu)
-" D move between splits, C+D center on cuser, A+ remove all bookmarks, marks
-" S show bookmark list, C+ add mark, A+ remove mark
-" A Undo, C+ redo
 
 nnoremap gh i " insert mode
 nnoremap <C-g> ^ " beginning of line
@@ -26,38 +19,32 @@ nmap <A-j> :action AceLineAction<CR>
 
 " KL;O as Arrows
 nmap k h " left
-nmap o j " up
-nmap l k " down
+nmap o k " up
+nmap l j " down
 nmap ; l " right
 
 nmap <C-k> :action EditorPreviousBlock  <CR>
-nmap <C-o> :action NextMethod <CR>
-nmap <C-l> :action PreviousMethod <CR>
+nmap <C-o> :action PreviousMethod <CR>
+nmap <C-l> :action NextMethod <CR>
 nmap <C-;> :action EditorNextBlock  <CR>
 
 nmap <A-k> :action EditorGotoBrace <CR>
-nmap <A-o> :action ExpandNode<CR>
-nmap <A-l> :action CollapseNode<CR>
+nmap <A-o> :action CollapseNode<CR>
+nmap <A-l> :action ExpandNode<CR>
 nmap <A-;> :action CollapseAll <CR>
 
 nmap d :action GotoNextSplitter<CR>
 nmap <C-d> zz " center curser
-nmap <A-d> :action RemoveAllBookmarks<CR>
 
 nmap s :action ShowBookmarks<CR>
 nmap <C-s> :action ToggleBookmark<CR>
-nmap <A-s> :action DeleteBookmark<CR>
+nmap <A-s> :action RemoveAllBookmarks <CR>
 
 nmap a u " undo
 nmap <C-a> <C-r> " redo
 
 
 " Numberkeys top-left -- res\ize and scroll
-" 1 textwrap, C+1 zoom in, A+ zoom out,
-" 2 resize left (C+A+S+left), C+2 stretch to top, A+2 resize up,
-" 3 resize right (C+A+S+right), C+3 stretch to bottom, A+3 resize down
-" 4 scroll left  C+4 scroll down A+4 decrease font
-" 5 scroll right C+5 scroll up  A+5 increase font
 
 nmap 1 :action ToggleUseSoftWraps<CR>
 nmap <C-1> :action AdjustIdeZoomIn<CR>
@@ -73,25 +60,20 @@ nmap <A-3> :action ResizeToolWindowDown<CR>
 
 nmap 4 zh " scroll left
 nmap <C-4> <C-e> " scroll down
-nmap <A-4> :action EditorDecreaseFontSize<CR>
+nmap <A-4> :action EditorIncreaseFontSize<CR>
 
 nmap 5 zl " scroll right
 nmap <C-5> <C-y> " scroll up
-nmap <A-5> :action EditorIncreaseFontSize<CR>
+nmap <A-5> :action EditorDecreaseFontSize<CR>
 
 
 "numberkeys - top right -- splits, themes and AI
-" 6 open AI assistant (A+S+S), C+6 AiAssistantExplainCode, A+6 search for answers (C+S+F1)
-" 7 open file as right split (S+Enter), C+7 split right, A+7 next splitter
-" 8 close all other splits, C+8 close current split, A+8 previus splitter
-" 9 toggle zenmode, C+9 presentation mode, A+9 distraction free mode
-" 0 light-theme, C+0 Darcula, A+0 high contrast
 
-nmap 6 :action AiAssistantChat<CR>                     " Open AI Assistant
-nmap <C-6> :action AiAssistantToolWindow <CR>              " AiAssistantToolWindow
-nmap <A-6> :action SearchDocumentation<CR>                   " Search for answers (C+S+F1)
+nmap 6 :action AiAssistantChat<CR>                           " AiAssistantChat
+nmap <C-6> :action AiAssistantRefactor <CR>                  " AiAssistantRefactor menu
+nmap <A-6> :action AiAssistantGenerateTests <CR>               " AiAssistantGenerateTests
 
-nmap 7 :action SplitVertically <CR>                         " Open file as right split (S+Enter)
+nmap 7 :action SplitVertically <CR>                          " Open file as right split (S+Enter)
 nmap <C-7> :action SplitRight<CR>                            " Split right (C+7)
 nmap <A-7> :action SelectNextSplitter<CR>                    " Next splitter (A+7)
 
@@ -108,10 +90,6 @@ nmap <C-0> :action SetDarculaTheme<CR>                       " Darcula theme
 nmap <A-0> :action SetHighContrastTheme<CR>                  " High contrast theme
 
 " Right top row (YUI-O-P[]) - reformat and edit text
-" Y navigate forward, C+y indent, A+y insert whitespace
-" U navigate backward, C+u unindent, A+u insert tab
-" I mark whole line, C+i move seledted line(s) up  , A+i Auto adjust indent selected lines (C+A+I)
-" P mark whole word, C+p move seledted line(s) down, A+p local reformat code (C+S+A+L)
 
 nmap y :action EditorScrollDown<CR>            " Navigate forward (down)
 nmap <C-y> >>                                  " Indent the current line
@@ -131,16 +109,10 @@ nmap <A-p> :action ReformatWithPredefinedStyle<CR>  " Local reformat code (Ctrl+
 
 
 " Left top row (qwert) " --- recent-files, recent-location, commenting
-      " search-everywhere (SS), go to file structure (C+F12), select file in project view
-      " tool-window popup, switching tabs popup (has currently open files tools and windows),
-" T enter insert mode to the right, C+t Open current file in project window
-" R Recent files popup (C+E), C+r recent edited files (C+S+E), A+r recent locations list
-" E Find in files (C+S+f), C+e search in file (C+f)
-" W doubleShift (search everywhere), C+w comment line, A+w comment block,
-" Q show what my keys do (dont know the commands)
 
 nmap t a                                         " Enter insert mode to the right
 nmap <C-t> :action SelectInProjectView<CR>       " Open current file in the project window
+nmap <A-t> :action GotoDeclaration<CR>           " GotoDeclaration
 
 nmap r :action RecentFiles<CR>                   " Open Recent Files popup (Ctrl+E)
 nmap <C-r> :action RecentChangedFiles<CR>        " Recent edited files (Ctrl+Shift+E)
@@ -148,6 +120,7 @@ nmap <A-r> :action ShowRecentLocations<CR>       " Recent locations list
 
 nmap e :action FindInPath<CR>                    " Find in files (Ctrl+Shift+F)
 nmap <C-e> :action Find<CR>                      " Search (Find) in file (Ctrl+F)
+nmap <A-e> :action ShowMainMenu <CR>             " ShowMainMenu
 
 nmap w :action SearchEverywhere<CR>              " Search everywhere (double Shift)
 nmap <C-w> :action CommentByLineComment<CR>      " Comment the current line
@@ -159,13 +132,6 @@ nmap <A-q> :WhichKey "<A-"<CR>                   " mappings starting from Alt.
 
 
 " Left botom row (ZXCVBNM) - tool menu navigation, context and copy paste
-" m scroll up one line, C+m page up, A+m half-page up
-" n scroll down one line, C+n page down, A+n half-page down
-" b last active tool window, C+b tool window list, A+b close active toolwindow
-" v paste from history, C+v enter visual mode, A+v join lines (C+S+J)
-" c cut/kill, C+c copy,                       A+c delete to end of line
-" x context-actions,C+x, generate-menu,A+x, Main-menu (Alt)
-" z context-menu,  C+z refactor-popup, A+z navigate-menu (C+A+A)
 
 nmap m <C-y>                                        " Scroll up one line (same as Ctrl+Y in Vim)
 nmap <C-m> <C-b>                                    " Page up
@@ -185,15 +151,15 @@ nmap <A-v> :action EditorJoinLines<CR>             " Join lines (Ctrl+Shift+J in
 
 nmap c :action EditorCut<CR>                      " kill
 nmap <C-c> :action EditorCopy<CR>                 " Copy
-nmap <A-c> D                                        " Delete (kill) from the cursor to the end of the line
+nmap <A-c> SurroundWith                           " SurroundWith
 
-nmap x :action ShowIntentionActions<CR>            " Show context actions
-nmap <C-x> :action Generate<CR>                    " Show IntelliJ's "Generate" menu
-nmap <A-x> :action MainMenu<CR>                    " Open the Main menu
+nmap x :action ShowIntentionActions  <CR>
+nmap <C-x> :action Generate <CR>
+nmap <A-x> :action Refactorings.QuickListPopupAction<CR>
 
-nmap z :action ContextMenu<CR>                     " Open context menu
-nmap <C-z> :action RefactorPopup<CR>               " Open refactor popup
-nmap <A-z> :action ToolsMenu<CR>                   " Open the tools menu
+nmap z :action ActivateViewMenu <CR>
+nmap <C-z> :action ActivateNavigation  <CR>
+nmap <A-z> :action  ActivateToolsMenu  <CR>
 
 
 " bottom , (manage breakpoints) and . (run and debug) keys
