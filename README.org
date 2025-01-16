@@ -14,7 +14,7 @@ installation instructions:
    - [[https://plugins.jetbrains.com/plugin/7086-acejump][AceJump]]: quick cursor movement
 2. Clone this repository in your home directory:
   #+begin_src sh
-  git clone https://github.com/Weiqifan1/intellimacsflykeys ~/.intellimacs
+  git clone https://github.com/Weiqifan1/intellimacsjumpkeys ~/.intellimacs
   #+end_src
 3. In your home directory, create the file =.ideavimrc= and paste the content from the file MAINIDEAVIMRCFILE/.ideavimrc
 
