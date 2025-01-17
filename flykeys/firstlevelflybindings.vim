@@ -2,6 +2,8 @@
 " intellij funktionalitet der boer komme med i layer-1
 " insert mode: \ => Normalmode, Ctrl + \ => insert \, Alt + \ => toggle Ideavim
 
+nmap ,p :action GotoAction<CR>
+nmap ,o :source ~/.ideavimrc<CR>
 
 " homerow sugeestion:
 
