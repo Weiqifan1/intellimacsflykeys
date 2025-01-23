@@ -9,8 +9,9 @@ source ~/.intellimacs/hybrid.vim
 source ~/.intellimacs/which-key.vim
 
 " (Optional) My own vim commands
-source ~/.intellimacs/flykeys/basicchangestovim.vim
-source ~/.intellimacs/flykeys/firstlevelflybindings.vim
+" source ~/.intellimacs/flykeys/firstlevelflybindings.vim
+
+
 
 " (Optional) Comma for major mode
 " nmap , <leader>m
