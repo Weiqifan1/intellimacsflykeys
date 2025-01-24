@@ -10,6 +10,8 @@ source ~/.intellimacs/which-key.vim
 
 " (Optional) My own vim commands
 " source ~/.intellimacs/flykeys/firstlevelflybindings.vim
+" jumpkeys - d and k
+source ~/.intellimacs/MAINIDEAVIMRCFILE/jumpkeys.vim
 
 
 
